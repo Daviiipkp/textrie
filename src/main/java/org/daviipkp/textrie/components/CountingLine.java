@@ -9,9 +9,9 @@ public class CountingLine extends Line {
     private int useCount = 0;
 
     @Override
-    public void print(short tabCount) {
+    public void print(short tabCount, boolean debug) {
         useCount++;
-        super.print(tabCount);
+        super.print(tabCount, debug);
     }
 
     public int getPrintedTimes() {

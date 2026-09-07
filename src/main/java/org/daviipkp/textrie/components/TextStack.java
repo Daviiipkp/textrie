@@ -39,23 +39,23 @@ public class TextStack implements Printable {
     }
 
     @Override
-    public void print(short tabCount) {
+    public void print(short tabCount, boolean debug) {
         for(Line c : l) {
-            c.print(tabCount);
-        }
-        int s = l.size();
-        if(separator == null) {
-            for(int i = 0; i < s; i++) {
-                l.get(i).print(tabCount);
+                c.print(tabCount, debug);
             }
-        }else{
-            for(int i = 0; i < s; i++) {
-                l.get(i).print(tabCount);
-                if(i < s-1) {
-                    separator.print(shouldTabSeparator?tabCount:0);
+            int s = l.size();
+            if(separator == null) {
+                for(int i = 0; i < s; i++) {
+                    l.get(i).print(tabCount, debug);
+                }
+            }else{
+                for(int i = 0; i < s; i++) {
+                    l.get(i).print(tabCount, debug);
+                    if(i < s-1) {
+                        separator.print(shouldTabSeparator?tabCount:0, debug);
+                    }
                 }
             }
-        }
     }
 
 

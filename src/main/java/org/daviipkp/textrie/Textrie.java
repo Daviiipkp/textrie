@@ -17,6 +17,28 @@ public class Textrie {
         System.out.println(text);
     };
 
+    public static void debug(String s) {
+        debugMethod.accept(s);
+    }
+
+    public static void debug(Object... arr) {
+        debug(objArrayToString("", arr));
+    }
+
+    public static void debugIfNotNull(String s) {
+        if(s != null) {
+            debugMethod.accept(s);
+        }
+    }
+
+    public static void debugWithTabs(short tabs, String s) {
+        debug(getTab(tabs, (short)2) + s);
+    }
+
+    public static void debugWithTabs(short tabs, Object... args) {
+        debug(getTab(tabs, (short)2) + objArrayToString("",args));
+    }
+
     public static void print(String s) {
         printMethod.accept(s);
     }

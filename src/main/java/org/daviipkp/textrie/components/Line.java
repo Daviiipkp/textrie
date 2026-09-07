@@ -14,8 +14,12 @@ public class Line implements Printable {
     }
     
     @Override 
-    public void print(short tabCount) {
+    public void print(short tabCount, boolean debug) {
         if(content.isBlank()) {
+            return;
+        }
+        if(debug) {
+            Textrie.debug(tabCount, content);
             return;
         }
         Textrie.printWithTabs(tabCount, content);

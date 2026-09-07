@@ -14,7 +14,7 @@ public class ErrorParser {
     }
 
     public static void handle(short num) {
-        map.get(num).print((short)0);
+        map.get(num).print((short)0, false);
     }
 
 }

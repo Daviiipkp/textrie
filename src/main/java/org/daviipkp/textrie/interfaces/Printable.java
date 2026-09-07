@@ -4,11 +4,11 @@ import org.daviipkp.textrie.Textrie;
 
 public interface Printable {
 
-    public void print(short tabCount);
+    public void print(short tabCount, boolean debug);
 
     default void debugPrint(short tabCount) {
         if(Textrie.canDebug()) {
-            print(tabCount);
+            print(tabCount, true);
         }
     }
 
