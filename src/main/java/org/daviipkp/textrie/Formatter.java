@@ -1,6 +1,6 @@
 package org.daviipkp.textrie;
 
-class Formatter implements AutoCloseable {
+public class Formatter implements AutoCloseable {
 
     private static short defaultTabCount = 0;
     private static short defaultTabSize = 2;

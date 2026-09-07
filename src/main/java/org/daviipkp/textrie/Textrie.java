@@ -8,7 +8,7 @@ public class Textrie {
 
     private static StringBuilder b = new StringBuilder();
 
-    private static Formatter f = new Formatter();
+    private static final Formatter f = new Formatter();
 
     private static Consumer<String> printMethod = text -> {
         System.out.println(text);
