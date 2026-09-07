@@ -3,13 +3,13 @@ package org.daviipkp.textrie;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.daviipkp.textrie.components.Line;
+import org.daviipkp.textrie.components.TextStack;
 
 public class ErrorParser {
 
-    private static final Map<Short, Line> map = new HashMap<>();
+    private static final Map<Short, TextStack> map = new HashMap<>();
 
-    public static void register(short num, Line text) {
+    public static void register(short num, TextStack text) {
         map.put(num, text);
     }
 
