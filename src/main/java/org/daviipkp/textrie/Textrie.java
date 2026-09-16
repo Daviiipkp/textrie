@@ -18,7 +18,9 @@ public class Textrie {
     };
 
     public static void debug(String s) {
-        debugMethod.accept(s);
+        if(debug) {
+            debugMethod.accept(s);
+        }
     }
 
     public static void debug(Object... arr) {
@@ -27,7 +29,7 @@ public class Textrie {
 
     public static void debugIfNotNull(String s) {
         if(s != null) {
-            debugMethod.accept(s);
+            debug(s);
         }
     }
 
